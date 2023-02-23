@@ -57,7 +57,7 @@ const server = http.createServer((req, res) => {
       calculator();
 
       res.write(
-        'Hello Server GET tu pathname es' +
+        'Hello Server  GET tu pathname es' +
           ' query ' +
           varAwithEqual +
           ', variable "a" es igual a ' +
