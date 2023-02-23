@@ -42,23 +42,31 @@ const server = http.createServer((req, res) => {
 
       // res.write('Hello world');
       // getAllKnowledge();
+      if (!isNaN(a) && !isNaN(b)) {
+        const calculator = () => {
+          let sum = a + b;
+          let res = a - b;
+          let mult = a * b;
+          let div = (a / b).toFixed(2);
 
-      const calculator = () => {
-        let sum = a + b;
-        let res = a - b;
-        let mult = a * b;
-        let div = a / b;
+          return (
+            ` a+b= ` +
+            sum +
+            `; a-b= ` +
+            res +
+            `; a*b= ` +
+            mult +
+            `; a/b= ` +
+            div
+          );
+        };
+        calculator();
 
-        return (
-          ` a+b= ` + sum + ` a-b= ` + res + ` a*b= ` + mult + ` a/b= ` + div
+        res.write(
+          `Has introducido el numero ${a} y el numero ${b}
+         ${calculator()}`
         );
-      };
-
-      calculator();
-
-      res.write(
-        `Has introducido el número${a} y el número ${b}/n${calculator()}`
-      );
+      }
       break;
     case 'POST':
       break;
