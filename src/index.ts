@@ -57,16 +57,7 @@ const server = http.createServer((req, res) => {
       calculator();
 
       res.write(
-        'Hello Server  GET tu pathname es' +
-          ' query ' +
-          varAwithEqual +
-          ', variable "a" es igual a ' +
-          a +
-          ', ' +
-          varBwithEqual +
-          ', variable b es igual a ' +
-          b +
-          calculator()
+        `Has introducido el número${a} y el número ${b}/n${calculator()}`
       );
       break;
     case 'POST':
